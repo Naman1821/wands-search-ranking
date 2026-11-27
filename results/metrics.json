@@ -1,0 +1,89 @@
+{
+  "dataset": {
+    "products": 42994,
+    "queries": 480,
+    "judgements": 233448
+  },
+  "query_intent": {
+    "eval_queries": 469,
+    "n_classes": 601,
+    "top1_accuracy": 0.7121535181236673,
+    "top3_accuracy": 0.8635394456289979
+  },
+  "full_catalogue": {
+    "bm25_single_field": {
+      "ndcg@10": 0.6868,
+      "mrr@10": 0.7242,
+      "exact_p@10": 0.3754
+    },
+    "bm25_multi_field": {
+      "ndcg@10": 0.7096,
+      "mrr@10": 0.6752,
+      "exact_p@10": 0.3498
+    },
+    "ltr_judged_only": {
+      "ndcg@10": 0.7164,
+      "mrr@10": 0.7169,
+      "exact_p@10": 0.379
+    },
+    "ltr_no_intent": {
+      "ndcg@10": 0.7471,
+      "mrr@10": 0.7226,
+      "exact_p@10": 0.3873
+    },
+    "ltr_with_intent": {
+      "ndcg@10": 0.7466,
+      "mrr@10": 0.7168,
+      "exact_p@10": 0.3827
+    }
+  },
+  "judged_pool_ndcg@10": {
+    "bm25_single_field": 0.8156,
+    "bm25_multi_field": 0.7788,
+    "ltr_judged_only": 0.8174,
+    "ltr_no_intent": 0.8124,
+    "ltr_with_intent": 0.8162
+  },
+  "ndcg@10_queries_with_relevant_items": 479,
+  "final_vs_stage1_queries": {
+    "better": 188,
+    "worse": 117,
+    "tied": 174
+  },
+  "relative_ndcg@10_gain_vs_single_field_bm25": 0.087,
+  "permutation_importance_logloss_increase": {
+    "bm25_name_rel": 0.1019,
+    "bm25_all_rel": 0.1018,
+    "text_coverage": 0.052,
+    "intent_rank": 0.0497,
+    "bm25_classcat": 0.0462,
+    "bm25_all": 0.0346,
+    "stage1_rel": 0.034,
+    "query_len": 0.0221,
+    "intent_prob_rel": 0.016,
+    "bm25_desc": 0.0159,
+    "char_cosine_name": 0.009,
+    "prf_class_share": 0.0082,
+    "bm25_name": 0.0076,
+    "char_cosine_rel": 0.0061,
+    "name_coverage": 0.0046,
+    "stage1_log_rank": 0.002,
+    "log_review_count": 0.0004,
+    "name_phrase_match": 0.0004,
+    "intent_top1_match": 0.0,
+    "average_rating": -0.0001,
+    "bm25_all_log_rank": -0.0003,
+    "bm25_features": -0.0012,
+    "stage1_score": -0.0012,
+    "bm25_features_rel": -0.0015,
+    "bm25_desc_rel": -0.0019,
+    "bm25_name_log_rank": -0.0024,
+    "intent_prob": -0.0088,
+    "bm25_classcat_rel": -0.0112
+  },
+  "settings": {
+    "folds": 5,
+    "candidates": 100,
+    "cv": "GroupKFold by query"
+  }
+}
